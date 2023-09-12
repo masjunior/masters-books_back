@@ -46,9 +46,10 @@ public class Endereco extends Dominio {
     @OneToOne
     @JoinColumn(name="pessoa_id", referencedColumnName = "id")
     private Pessoa pessoa;
-//
-//
-//    @PrimaryKeyJoinColumn
-//    private Pedido pedido;
+
+
+    @OneToOne
+    @JoinColumn(name="pedido_id", referencedColumnName = "id")
+    private Pedido pedido;
 
 }
