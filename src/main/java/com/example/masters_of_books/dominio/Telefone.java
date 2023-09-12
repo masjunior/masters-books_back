@@ -1,12 +1,8 @@
 package com.example.masters_of_books.dominio;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrimaryKeyJoinColumn;
-import jakarta.persistence.Table;
+import com.example.masters_of_books.utils.dominio.Dominio;
+import com.example.masters_of_books.utils.dominio.Pessoa;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,19 +15,19 @@ import lombok.Setter;
 @NoArgsConstructor
 @Entity
 @Table(name = "telefones")
-class Telefone {
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+@AttributeOverrides({
+        @AttributeOverride(name = "id", column = @Column(name = "id")),
+})
+public class Telefone extends Dominio {
+
 	@Column(name = "tipo")
     private String tipo;
 	@Column(name = "ddd")
     private String ddd;
-	@Column(name = "nnumero")
+	@Column(name = "numero")
     private String numero;
 
-	@PrimaryKeyJoinColumn
-	@Column(name = "cliente_id")
-    private Cliente cliente;
+	@ManyToOne
+	@JoinColumn(name="pessoa_id", nullable=false, referencedColumnName = "id")
+    private Pessoa pessoa;
 }

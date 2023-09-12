@@ -1,17 +1,12 @@
 package com.example.masters_of_books.dominio;
 
 
+import com.example.masters_of_books.utils.dominio.Dominio;
+import com.example.masters_of_books.utils.dominio.Pessoa;
+import jakarta.persistence.*;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,11 +18,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "enderecos")
-public class Endereco {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+@AttributeOverrides({
+        @AttributeOverride(name = "id", column = @Column(name = "id")),
+})
+public class Endereco extends Dominio {
 
     @Column(name = "tipo_residencia")
     @JdbcTypeCode(SqlTypes.JSON)
@@ -46,11 +40,12 @@ public class Endereco {
     @ManyToOne
     @JoinColumn(name="cidade_id")
     private Cidade cidade;
-//    @Column(name = "apelido")
-//    private String apelido;
-//
-//    @PrimaryKeyJoinColumn
-//    private Cliente cliente;
+    @Column(name = "apelido")
+    private String apelido;
+
+    @OneToOne
+    @JoinColumn(name="pessoa_id", referencedColumnName = "id")
+    private Pessoa pessoa;
 //
 //
 //    @PrimaryKeyJoinColumn

@@ -33,5 +33,4 @@ class Cidade {
     @JoinColumn(name="estado_id")
     private Estado estado;
 
-    // Construtores, getters e setters aqui
 }
