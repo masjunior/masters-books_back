@@ -38,13 +38,16 @@ public class Endereco extends Dominio {
     @Column(name = "cep")
     private String cep;
     @ManyToOne
-    @JoinColumn(name="cidade_id")
+    @JoinColumn(name="cidade_id", referencedColumnName = "id")
     private Cidade cidade;
     @Column(name = "apelido")
     private String apelido;
 
+    @Column(name = "principal")
+    private Boolean principal;
+
     @OneToOne
-    @JoinColumn(name="pessoa_id", referencedColumnName = "id")
+    @JoinColumn(name="pessoa_id", referencedColumnName = "id", unique = false)
     private Pessoa pessoa;
 
 

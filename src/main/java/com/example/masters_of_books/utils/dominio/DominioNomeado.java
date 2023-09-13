@@ -15,7 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public abstract class DominioNomeado extends Dominio {
 
-    @Id
+
     @Column(name = "nome")
     protected String nome;
 

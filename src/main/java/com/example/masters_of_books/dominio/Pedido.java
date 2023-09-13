@@ -24,4 +24,11 @@ public class Pedido extends Dominio {
     @OneToOne(optional=false)
     @JoinColumn( name="endereco_id", nullable=false, referencedColumnName = "id")
     private Endereco endereco;
+
+    @OneToOne(optional=false)
+    @JoinColumn( name="cliente_id", nullable=false, referencedColumnName = "id")
+    private Cliente cliente;
+
+//    @OneToMany
+//    private List<Item> itens;
 }
