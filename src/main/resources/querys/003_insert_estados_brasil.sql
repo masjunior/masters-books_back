@@ -1,0 +1,31 @@
+INSERT INTO public.estados(
+	pais_id, nome, sigla)
+	VALUES
+	(26,'Acre','AC'),
+(26,'Alagoas','AL'),
+(26,'Amapá','AP'),
+(26,'Amazonas','AM'),
+(26,'Bahia','BA'),
+(26,'Ceará','CE'),
+(26,'Espírito Santo','ES'),
+(26,'Goiás','GO'),
+(26,'Maranhão','MA'),
+(26,'Mato Grosso','MT'),
+(26,'Mato Grosso do Sul','MS'),
+(26,'Minas Gerais','MG'),
+(26,'Pará','PA'),
+(26,'Paraíba','PB'),
+(26,'Paraná','PR'),
+(26,'Pernambuco','PE'),
+(26,'Piauí','PI'),
+(26,'Rio de Janeiro','RJ'),
+(26,'Rio Grande do Norte','RN'),
+(26,'Rio Grande do Sul','RS'),
+(26,'Rondônia','RO'),
+(26,'Roraima','RR'),
+(26,'Santa Catarina','SC'),
+(26,'São Paulo','SP'),
+(26,'Sergipe','SE'),
+(26,'Tocantins','TO'),
+(26,'Distrito Federal','DF')
+;

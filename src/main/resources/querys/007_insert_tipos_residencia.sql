@@ -1,0 +1,5 @@
+INSERT INTO public.TIPOS_RESIDENCIA (descricao) VALUES
+('CASA'),
+('APARTAMENTO'),
+('OUTRO')
+;
