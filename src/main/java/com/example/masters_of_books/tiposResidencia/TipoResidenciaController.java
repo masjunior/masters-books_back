@@ -1,4 +1,4 @@
-package com.example.masters_of_books.pais;
+package com.example.masters_of_books.tiposResidencia;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,44 +10,44 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("/paises")
+@RequestMapping("/tipoResidencias")
 @CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @Slf4j
-public class PaisController {
+public class TipoResidenciaController {
 
     @Autowired
-    private PaisService pais;
+    private TipoResidenciaService tipoResidenciaService;
 
     @GetMapping("")
-    public ResponseEntity<List<Pais>> listar() {
-        List<Pais> paises = pais.listar();
-        log.info("URL /paises requested");
-        return ResponseEntity.ok(paises);
+    public ResponseEntity<List<TipoResidencia>> listar() {
+        List<TipoResidencia> tipoResidencias = tipoResidenciaService.listar();
+        log.info("URL /tipoResidencias requested");
+        return ResponseEntity.ok(tipoResidencias);
     }
 
     @GetMapping("/novo")
     public String exibirFormularioNovo(Model model) {
-        Pais tipoResidencia = new Pais();
+        TipoResidencia tipoResidencia = new TipoResidencia();
         model.addAttribute("pais", tipoResidencia);
         return "formularioPais";
     }
 
     @PostMapping("/salvar")
-    public String salvar(@ModelAttribute("pais") Pais tipoResidencia) {
-        pais.salvar(tipoResidencia);
+    public String salvar(@ModelAttribute("pais") TipoResidencia tipoResidencia) {
+        tipoResidenciaService.salvar(tipoResidencia);
         return "redirect:/paiss/";
     }
 
     @GetMapping("/editar/{id}")
     public String exibirFormularioEditar(@PathVariable Long id, Model model) {
-        Pais tipoResidencia = pais.buscarPorId(id);
+        TipoResidencia tipoResidencia = tipoResidenciaService.buscarPorId(id);
         model.addAttribute("pais", tipoResidencia);
         return "formularioPais";
     }
 
     @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable Long id) {
-        pais.excluir(id);
+        tipoResidenciaService.excluir(id);
         return "redirect:/paises/";
     }
 }

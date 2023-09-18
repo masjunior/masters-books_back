@@ -1,6 +1,7 @@
 package com.example.masters_of_books.dominio;
 
-import com.example.masters_of_books.pais.Pais;
+
+import com.example.masters_of_books.tiposResidencia.TipoResidencia;
 import com.example.masters_of_books.utils.dominio.DominioNomeado;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,6 +25,6 @@ public class Estado extends DominioNomeado {
 
     @ManyToOne
     @JoinColumn(name = "pais_id")
-    private Pais pais;
+    private TipoResidencia tipoResidencia;
 
 }

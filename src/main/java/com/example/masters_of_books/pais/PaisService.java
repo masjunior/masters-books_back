@@ -25,8 +25,8 @@ public class PaisService {
         return pais.orElse(null);
     }
 
-    public void salvar(Pais pais) {
-        paisRepository.save(pais);
+    public void salvar(Pais tipoResidencia) {
+        paisRepository.save(tipoResidencia);
     }
 
     public void excluir(Long id) {
