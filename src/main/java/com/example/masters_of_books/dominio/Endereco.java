@@ -4,13 +4,12 @@ package com.example.masters_of_books.dominio;
 import com.example.masters_of_books.utils.dominio.Dominio;
 import com.example.masters_of_books.utils.dominio.Pessoa;
 import jakarta.persistence.*;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 @Entity
 @Getter
@@ -38,7 +37,7 @@ public class Endereco extends Dominio {
     @Column(name = "cep")
     private String cep;
     @ManyToOne
-    @JoinColumn(name="cidade_id", referencedColumnName = "id")
+    @JoinColumn(name = "cidade_id", referencedColumnName = "id")
     private Cidade cidade;
     @Column(name = "apelido")
     private String apelido;
@@ -47,12 +46,12 @@ public class Endereco extends Dominio {
     private Boolean principal;
 
     @OneToOne
-    @JoinColumn(name="pessoa_id", referencedColumnName = "id", unique = false)
+    @JoinColumn(name = "pessoa_id", referencedColumnName = "id", unique = false)
     private Pessoa pessoa;
 
 
     @OneToOne
-    @JoinColumn(name="pedido_id", referencedColumnName = "id")
+    @JoinColumn(name = "pedido_id", referencedColumnName = "id")
     private Pedido pedido;
 
 }

@@ -20,14 +20,14 @@ import lombok.Setter;
 })
 public class Telefone extends Dominio {
 
-	@Column(name = "tipo")
+    @Column(name = "tipo")
     private String tipo;
-	@Column(name = "ddd")
+    @Column(name = "ddd")
     private String ddd;
-	@Column(name = "numero")
+    @Column(name = "numero")
     private String numero;
 
-	@ManyToOne
-	@JoinColumn(name="pessoa_id", nullable=false, referencedColumnName = "id")
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id", nullable = false, referencedColumnName = "id")
     private Pessoa pessoa;
 }

@@ -1,7 +1,5 @@
 package com.example.masters_of_books.cliente;
 
-import com.example.masters_of_books.cliente.Cliente;
-import com.example.masters_of_books.cliente.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -31,9 +29,9 @@ public class ClienteController {
         cliente.setEmail("TESTE@123");
         cliente.setSenha("seila");
         cliente.setId(1L);
-    	System.out.println("URL /clientes requested");
+        System.out.println("URL /clientes requested");
         clientes.add(cliente);
-    	return ResponseEntity.ok(clientes);
+        return ResponseEntity.ok(clientes);
     }
 
     @GetMapping("/novo")

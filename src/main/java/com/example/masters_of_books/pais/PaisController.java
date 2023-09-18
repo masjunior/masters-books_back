@@ -1,6 +1,5 @@
 package com.example.masters_of_books.pais;
 
-import com.example.masters_of_books.dominio.Pais;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -20,8 +19,8 @@ public class PaisController {
     @GetMapping("")
     public ResponseEntity<List<Pais>> listar() {
         List<Pais> paises = paisService.listar();
-    	System.out.println("URL /paises requested");
-    	return ResponseEntity.ok(paises);
+        System.out.println("URL /paises requested");
+        return ResponseEntity.ok(paises);
     }
 
     @GetMapping("/novo")

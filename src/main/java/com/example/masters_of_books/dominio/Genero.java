@@ -1,15 +1,13 @@
 package com.example.masters_of_books.dominio;
 
+import com.example.masters_of_books.utils.dominio.Dominio;
 import jakarta.persistence.*;
 import lombok.Getter;
 
 @Entity
 @Getter
 @Table(name = "genero")
-public class Genero {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Genero extends Dominio {
 
     @Enumerated(EnumType.STRING)
     private DescricaoEnum descricao;
@@ -18,6 +16,6 @@ public class Genero {
     public enum DescricaoEnum {
         MASCULINO,
         FEMININO,
-        OUTRO;
+        OUTRO
     }
 }

@@ -1,7 +1,5 @@
 package com.example.masters_of_books.cliente;
 
-import com.example.masters_of_books.cliente.Cliente;
-import com.example.masters_of_books.cliente.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

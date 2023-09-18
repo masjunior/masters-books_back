@@ -40,9 +40,7 @@ public abstract class Dominio implements IEntidade, Serializable {
         Dominio other = (Dominio) obj;
         if (id == null) {
             return false;
-        } else if (!id.equals(other.id))
-            return false;
-        return true;
+        } else return id.equals(other.id);
     }
 
 }

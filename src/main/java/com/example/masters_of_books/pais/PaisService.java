@@ -1,7 +1,5 @@
 package com.example.masters_of_books.pais;
 
-import com.example.masters_of_books.dominio.Pais;
-import com.example.masters_of_books.pais.PaisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

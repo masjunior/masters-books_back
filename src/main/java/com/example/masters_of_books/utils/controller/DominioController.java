@@ -21,8 +21,8 @@ public abstract class DominioController {
 
     public ResponseEntity<List<Dominio>> listar() {
         List<Dominio> dominios = dominioService.listar();
-    	System.out.println("URL / requested");
-    	return ResponseEntity.ok(dominios);
+        System.out.println("URL / requested");
+        return ResponseEntity.ok(dominios);
     }
 
     @GetMapping("/novo")

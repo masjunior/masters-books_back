@@ -1,12 +1,6 @@
 package com.example.masters_of_books.dominio;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 
 @Entity
@@ -21,8 +15,8 @@ public class TipoLogradouro {
     private DescricaoEnum descricao;
 
     @Getter
-    public enum DescricaoEnum{
-    	RUA,
+    public enum DescricaoEnum {
+        RUA,
         AVENIDA,
         TRAVESSA,
         OUTRO

@@ -1,7 +1,6 @@
 package com.example.masters_of_books.pais;
 
 
-import com.example.masters_of_books.dominio.Pais;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
