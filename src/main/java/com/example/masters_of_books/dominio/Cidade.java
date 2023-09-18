@@ -14,9 +14,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="cidades")
-@AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "id")),
-})
 public class Cidade extends DominioNomeado {
 
     @ManyToOne

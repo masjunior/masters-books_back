@@ -1,4 +1,4 @@
-package com.example.masters_of_books.dominio;
+package com.example.masters_of_books.cliente;
 
 import java.util.Date;
 import java.util.List;
