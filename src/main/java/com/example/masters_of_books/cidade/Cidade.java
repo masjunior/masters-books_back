@@ -1,4 +1,4 @@
-package com.example.masters_of_books.dominio;
+package com.example.masters_of_books.cidade;
 
 import com.example.masters_of_books.estado.Estado;
 import com.example.masters_of_books.utils.dominio.DominioNomeado;

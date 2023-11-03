@@ -1,6 +1,7 @@
 package com.example.masters_of_books.dominio;
 
 
+import com.example.masters_of_books.cidade.Cidade;
 import com.example.masters_of_books.tiposResidencia.TipoResidencia;
 import com.example.masters_of_books.utils.dominio.Dominio;
 import com.example.masters_of_books.utils.dominio.Pessoa;
