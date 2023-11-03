@@ -83,7 +83,7 @@
         primary key (id)
     );
     create table pessoa (
-        data_nascimento timestamp(6),
+        data_nascimento date,
         genero_id bigint unique,
         id bigserial not null,
         cpf varchar(255),
