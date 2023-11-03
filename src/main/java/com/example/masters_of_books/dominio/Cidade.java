@@ -1,5 +1,6 @@
 package com.example.masters_of_books.dominio;
 
+import com.example.masters_of_books.estado.Estado;
 import com.example.masters_of_books.utils.dominio.DominioNomeado;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

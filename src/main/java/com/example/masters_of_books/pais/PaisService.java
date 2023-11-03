@@ -9,28 +9,28 @@ import java.util.Optional;
 @Service
 public class PaisService {
 
-    private final PaisRepository paisRepository;
+    private final PaisRepository repository;
 
     @Autowired
-    public PaisService(PaisRepository paisRepository) {
-        this.paisRepository = paisRepository;
+    public PaisService(PaisRepository repository) {
+        this.repository = repository;
     }
 
     public List<Pais> listar() {
-        return paisRepository.findAll();
+        return repository.findAll();
     }
 
     public Pais buscarPorId(Long id) {
-        Optional<Pais> pais = paisRepository.findById(id);
+        Optional<Pais> pais = repository.findById(id);
         return pais.orElse(null);
     }
 
-    public void salvar(Pais tipoResidencia) {
-        paisRepository.save(tipoResidencia);
+    public void salvar(Pais pais) {
+        repository.save(pais);
     }
 
     public void excluir(Long id) {
-        paisRepository.deleteById(id);
+        repository.deleteById(id);
     }
 }
 

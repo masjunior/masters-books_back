@@ -16,11 +16,11 @@ import java.util.List;
 public class PaisController {
 
     @Autowired
-    private PaisService pais;
+    private PaisService service;
 
     @GetMapping("")
     public ResponseEntity<List<Pais>> listar() {
-        List<Pais> paises = pais.listar();
+        List<Pais> paises = service.listar();
         log.info("URL /paises requested");
         return ResponseEntity.ok(paises);
     }
@@ -34,20 +34,20 @@ public class PaisController {
 
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute("pais") Pais tipoResidencia) {
-        pais.salvar(tipoResidencia);
+        service.salvar(tipoResidencia);
         return "redirect:/paiss/";
     }
 
     @GetMapping("/editar/{id}")
     public String exibirFormularioEditar(@PathVariable Long id, Model model) {
-        Pais tipoResidencia = pais.buscarPorId(id);
+        Pais tipoResidencia = service.buscarPorId(id);
         model.addAttribute("pais", tipoResidencia);
         return "formularioPais";
     }
 
     @GetMapping("/excluir/{id}")
     public String excluir(@PathVariable Long id) {
-        pais.excluir(id);
+        service.excluir(id);
         return "redirect:/paises/";
     }
 }
