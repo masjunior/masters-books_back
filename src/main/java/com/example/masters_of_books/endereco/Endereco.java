@@ -1,7 +1,9 @@
-package com.example.masters_of_books.dominio;
+package com.example.masters_of_books.endereco;
 
 
 import com.example.masters_of_books.cidade.Cidade;
+import com.example.masters_of_books.dominio.Pedido;
+import com.example.masters_of_books.dominio.TipoLogradouro;
 import com.example.masters_of_books.tiposResidencia.TipoResidencia;
 import com.example.masters_of_books.utils.dominio.Dominio;
 import com.example.masters_of_books.utils.dominio.Pessoa;
@@ -19,9 +21,6 @@ import org.hibernate.type.SqlTypes;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "enderecos")
-@AttributeOverrides({
-        @AttributeOverride(name = "id", column = @Column(name = "id")),
-})
 public class Endereco extends Dominio {
 
     @Column(name = "tipo_residencia")

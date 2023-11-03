@@ -1,6 +1,7 @@
 package com.example.masters_of_books.dominio;
 
 import com.example.masters_of_books.cliente.Cliente;
+import com.example.masters_of_books.endereco.Endereco;
 import com.example.masters_of_books.utils.dominio.Dominio;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

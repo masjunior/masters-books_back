@@ -1,7 +1,7 @@
 package com.example.masters_of_books.utils.dominio;
 
-import com.example.masters_of_books.dominio.Endereco;
-import com.example.masters_of_books.dominio.Genero;
+import com.example.masters_of_books.endereco.Endereco;
+import com.example.masters_of_books.genero.Genero;
 import com.example.masters_of_books.dominio.Telefone;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
