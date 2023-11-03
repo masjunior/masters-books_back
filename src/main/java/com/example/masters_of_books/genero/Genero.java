@@ -1,4 +1,4 @@
-package com.example.masters_of_books.dominio;
+package com.example.masters_of_books.genero;
 
 import com.example.masters_of_books.utils.dominio.Dominio;
 import jakarta.persistence.*;
