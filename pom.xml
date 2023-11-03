@@ -15,6 +15,9 @@
 	<description>Project from LES (Laboratório de engenharia de software)</description>
 	<properties>
 		<java.version>17</java.version>
+		<DB_URL>jdbc:postgresql://localhost:5432/mastersofbooks</DB_URL>
+		<DB_USERNAME>postgres</DB_USERNAME>
+		<DB_PASSWORD>postgres</DB_PASSWORD>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -63,6 +66,22 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>9.17.0</version>
+				<configuration>
+					<url>${DB_URL}</url>
+					<user>${DB_USERNAME}</user>
+					<password>${DB_PASSWORD}</password>
+				</configuration>
+<!--				<dependencies>-->
+<!--					<dependency>-->
+<!--						<groupId>org.postgresql</groupId>-->
+<!--						<artifactId>postgresql</artifactId>-->
+<!--					</dependency>-->
+<!--				</dependencies>-->
 			</plugin>
 		</plugins>
 	</build>
